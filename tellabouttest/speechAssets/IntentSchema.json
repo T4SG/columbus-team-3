@@ -1,22 +1,10 @@
 {
   "intents": [
     {
-      "intent": "TellMeAJokeIntent",
+      "intent": "TellAboutTestIntent",
       "slots": []
     },
-    {
-      "intent": "WhosThereIntent",
-      "slots": []
-    },
-    {
-     "intent": "SetupNameWhoIntent",
-     "slots":[
-        {
-          "name": "SetupName",
-          "type": "LIST_OF_SETUP_NAMES"
-        }
-      ]
-    },
+
     {
       "intent": "HelpIntent",
       "slots": []

@@ -1,37 +1,30 @@
-TellMeAJokeIntent tell me a joke
-TellMeAJokeIntent tell a joke
-TellMeAJokeIntent say a joke
-TellMeAJokeIntent make a joke
-TellMeAJokeIntent give me a joke
-TellMeAJokeIntent tell me a knock knock joke
-TellMeAJokeIntent tell a knock knock joke
-TellMeAJokeIntent say a knock knock joke
-TellMeAJokeIntent make a knock knock joke
-TellMeAJokeIntent give me a knock knock joke
-TellMeAJokeIntent a joke
-TellMeAJokeIntent a knock knock joke
-TellMeAJokeIntent the joke
-TellMeAJokeIntent the knock knock joke
-TellMeAJokeIntent what's a joke
-TellMeAJokeIntent what is a joke
-TellMeAJokeIntent if it can tell me a joke
-TellMeAJokeIntent will it tell me a joke
-TellMeAJokeIntent can it tell me a joke
-TellMeAJokeIntent to tell me a joke
-TellMeAJokeIntent what's a knock knock joke
-TellMeAJokeIntent what is a knock knock joke
-TellMeAJokeIntent if it can tell me a knock knock joke
-TellMeAJokeIntent will it tell me a knock knock joke
-TellMeAJokeIntent can it tell me a knock knock joke
-TellMeAJokeIntent to tell me a knock knock joke
+TellAboutTestIntent tell me a joke
+TellAboutTestIntent tell a joke
+TellAboutTestIntent say a joke
+TellAboutTestIntent make a joke
+TellAboutTestIntent give me a joke
+TellAboutTestIntent tell me a knock knock joke
+TellAboutTestIntent tell a knock knock joke
+TellAboutTestIntent say a knock knock joke
+TellAboutTestIntent make a knock knock joke
+TellAboutTestIntent give me a knock knock joke
+TellAboutTestIntent a joke
+TellAboutTestIntent a knock knock joke
+TellAboutTestIntent the joke
+TellAboutTestIntent the knock knock joke
+TellAboutTestIntent what's a joke
+TellAboutTestIntent what is a joke
+TellAboutTestIntent if it can tell me a joke
+TellAboutTestIntent will it tell me a joke
+TellAboutTestIntent can it tell me a joke
+TellAboutTestIntent to tell me a joke
+TellAboutTestIntent what's a knock knock joke
+TellAboutTestIntent what is a knock knock joke
+TellAboutTestIntent if it can tell me a knock knock joke
+TellAboutTestIntent will it tell me a knock knock joke
+TellAboutTestIntent can it tell me a knock knock joke
+TellAboutTestIntent to tell me a knock knock joke
 
-WhosThereIntent who is there
-WhosThereIntent who's there
-WhosThereIntent who there
-WhosThereIntent who is this
-WhosThereIntent who's this
-
-SetupNameWhoIntent {SetupName} who
 
 HelpIntent help
 HelpIntent help me
