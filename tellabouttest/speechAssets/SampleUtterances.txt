@@ -1,29 +1,13 @@
-TellAboutTestIntent tell me a joke
-TellAboutTestIntent tell a joke
-TellAboutTestIntent say a joke
-TellAboutTestIntent make a joke
-TellAboutTestIntent give me a joke
-TellAboutTestIntent tell me a knock knock joke
-TellAboutTestIntent tell a knock knock joke
-TellAboutTestIntent say a knock knock joke
-TellAboutTestIntent make a knock knock joke
-TellAboutTestIntent give me a knock knock joke
-TellAboutTestIntent a joke
-TellAboutTestIntent a knock knock joke
-TellAboutTestIntent the joke
-TellAboutTestIntent the knock knock joke
-TellAboutTestIntent what's a joke
-TellAboutTestIntent what is a joke
-TellAboutTestIntent if it can tell me a joke
-TellAboutTestIntent will it tell me a joke
-TellAboutTestIntent can it tell me a joke
-TellAboutTestIntent to tell me a joke
-TellAboutTestIntent what's a knock knock joke
-TellAboutTestIntent what is a knock knock joke
-TellAboutTestIntent if it can tell me a knock knock joke
-TellAboutTestIntent will it tell me a knock knock joke
-TellAboutTestIntent can it tell me a knock knock joke
-TellAboutTestIntent to tell me a knock knock joke
+TellAboutTestIntent tell about test
+TellAboutTestIntent tell a test
+TellAboutTestIntent say a test
+TellAboutTestIntent make a test
+TellAboutTestIntent give me a test
+TellAboutTestIntent a test
+TellAboutTestIntent the test
+TellAboutTestIntent what's a test
+TellAboutTestIntent what is a test
+
 
 
 HelpIntent help
