@@ -47,8 +47,8 @@
 
       if (error) throw error;
       /* Setting the domain for X and Y */
-      x.domain(data.map(function(d) { return d["Department"] + d["Course Number"]; }));
-      y.domain([0, d3.max(data, function(d) { return d.GPA; })]);
+      x.domain(data.map(function(d) { return d["Date"]; }));
+      y.domain([0, d3.max(data, function(d) { return d.Grade; })]);
       /* Drawing the X and Y axes */
       drawXAxis();
       drawYAxis();
@@ -64,8 +64,8 @@
 
        var map = d3.map();
        data.forEach(function(d){
-            if (!map.has(d.Department)){
-                map.set(d.Department, [d.Department])
+            if (!map.has(d.Date)){
+                map.set(d.Date, [d.Date])
             }
         });
 
@@ -104,7 +104,7 @@
     });
 
     function type(d) {
-      d.GPA = +d.GPA;
+      d.Grade = +d.Grade;
       return d;
     }
 
@@ -118,7 +118,7 @@
          .delay(function(d) { return Math.random() * 500;} )
          .style("opacity", 1);
       svg.selectAll(".bar")
-         .filter(function(d) { return d.Department != data || d.GPA < gpa; })
+         .filter(function(d) { return d.Date != data || d.Grade < gpa; })
          .transition()
          .duration( 1000 )
          .delay(function(d) { return Math.random() * 500;} )
