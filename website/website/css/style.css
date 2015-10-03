@@ -1,4 +1,58 @@
 body {
+  font: 14px sans-serif;
+  font-weight: 400;
+  text-align: center;
+  background: #202020;
+  color: #ff0000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: #FFFF66;
+}
+
+.bar:hover {
+  fill: white;
+}
+
+.dot {
+  stroke: none;
+}
+
+.tooltip {
+  background: #fff;
+  color: #202020;
+  border-radius: 5px;
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+  text-align: left;
+  opacity: .25;
+}
+
+.scatterplot {
+  float: left;
+}
+
+
+.wrap {
+  width: 1050px;
+  margin: 0 auto 0;
+}
+
+
+
+
+body {
     margin: 0;
     padding: 0;
     width: 100%;
