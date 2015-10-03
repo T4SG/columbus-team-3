@@ -252,7 +252,7 @@ function filterDots(School) {
          .delay(function(d) { return Math.random() * 500;} )
          .style("opacity", 1);
       svgScatter.selectAll(".dot")
-         .filter(function(d) { return d.School != School; })
+         .filter(function(d) { return d["Grade Level"] != School; })
          .transition()
          .duration( 1000 )
          .delay(function(d) { return Math.random() * 500;} )
