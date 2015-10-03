@@ -35,6 +35,17 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600&subset=latin,greek' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.15/dist/jquery.flip.min.js"></script>
+    <script>
+
+  function showPicture(){
+      console.log("Hi");
+      var $chart = $('#columnchart_material');
+      var $input = $('#student_input');
+      console.log($chart);
+      $chart.fadeTo(1000, 1);
+    }
+
+    </script>
 
 
 </head>
@@ -61,7 +72,7 @@
             <div id="student_lookup"  class="slide">
             <div>
                     <h3>Search for a student, school, grade level, etc. </h3>
-                    <p><input></input> <button>Search</button>
+                    <p><input id="student_input"></input> <button onclick="showPicture()">Search</button>
 
             </div>
 

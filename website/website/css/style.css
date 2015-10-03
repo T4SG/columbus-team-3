@@ -302,3 +302,8 @@ vertical-align: center;
 
 
 
+
+#columnchart_material {
+  opacity: 0;
+  margin: auto;
+}
