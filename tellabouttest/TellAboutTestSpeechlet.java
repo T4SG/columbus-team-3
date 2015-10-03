@@ -45,9 +45,10 @@ public class TellAboutTestSpeechlet implements Speechlet  {
     public SpeechletResponse onIntent(final IntentRequest request, final Session session)
             throws SpeechletException {
         log.info("onIntent requestId={}, sessionId={}", request.getRequestId(),session.getSessionId());
+            handleTypeTestIntent(session);
+            SpeechletResponse resp = handleReturnTestIntent(session);
 
-
-            String speechOutput = "";
+            String speechOutput = resp.toString();
             String repromptText = speechOutput;
             return newAskResponse("<speak>" + speechOutput + "</speak>", "<speak>" + repromptText + "</speak>");
     }
@@ -62,6 +63,23 @@ public class TellAboutTestSpeechlet implements Speechlet  {
     }
 
     private SpeechletResponse handleTypeTestIntent(final Session session) {
+        String speechOutput = "What was the test?";
+
+        // Reprompt speech will be triggered if the user doesn't respond.
+        String repromptText = "I'm sorry I didn't catch that";
+
+        // Create the Simple card content.
+        SimpleCard card = new SimpleCard();
+        card.setTitle("Lebron");
+        card.setContent(speechOutput);
+
+        SpeechletResponse response = newAskResponse("<speak>" + speechOutput + "</speak>",
+                "<speak>" + repromptText + "</speak>");
+        response.setCard(card);
+        return response;
+    }
+
+    private SpeechletResponse handleReturnTestIntent(final Session session) {
         String speechOutput = "What was the test?";
 
         // Reprompt speech will be triggered if the user doesn't respond.
