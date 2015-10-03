@@ -41,5 +41,6 @@ UID varchar(50),
 eventName varchar(250),
 date varchar(50),
 eventType(50),
-hours int
+hours int,
+PRIMARY KEY(UID, eventName)
 );
