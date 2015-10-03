@@ -1,0 +1,34 @@
+HelloWorldIntent math
+HelloWorldIntent physics
+HelloWorldIntent biology
+HelloWorldIntent bio
+HelloWorldIntent chemistry
+HelloWorldIntent chem
+HelloWorldIntent Spanish
+HelloWorldIntent English
+
+GoodGradeIntent A
+GoodGradeIntent B
+GoodGradeIntent I got an A
+GoodGradeIntent I got a B
+
+BadGradeIntent C
+BadGradeIntent D
+BadGradeIntent F
+BadGradeIntent I got a C
+BadGradeIntent I got a D
+BadGradeIntent I got an F
+
+AttendanceIntent attendance
+
+YesIntent yes
+YesIntent yeah
+YesIntent yup
+YesIntent yuh
+YesIntent yah
+
+NoIntent no
+NoIntent nope
+NoIntent nah
+NoIntent nay
+NoIntent naw

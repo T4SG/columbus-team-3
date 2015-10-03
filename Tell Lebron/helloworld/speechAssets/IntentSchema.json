@@ -1,0 +1,28 @@
+{
+  "intents": [
+    {
+      "intent": "HelloWorldIntent",
+      "slots": []
+    },
+    {
+      "intent": "GoodGradeIntent",
+      "slots": []
+    },
+    {
+      "intent": "BadGradeIntent",
+      "slots": []
+    },
+    {
+      "intent": "AttendanceIntent",
+      "slots": []
+    },
+    {
+      "intent": "YesIntent",
+      "slots": []
+    },
+    {
+      "intent": "NoIntent",
+      "slots": []
+    }
+  ]
+}
