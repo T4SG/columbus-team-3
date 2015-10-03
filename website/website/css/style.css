@@ -2,7 +2,6 @@ body {
   font: 14px sans-serif;
   font-weight: 400;
   text-align: center;
-  margin-top: 0;
   background: #202020;
   color: #ff0000;
   font-family: 'Montserrat', sans-serif;
@@ -108,13 +107,6 @@ p {
 
 }
 
-h3 {
-    margin: 0;
-    padding-top: 200px;
-    font-size: 50px;
-    color: white;
-}
-
 
 
 
@@ -183,7 +175,7 @@ li {
 
 #home {
     /*background-color: navy;*/
-    background: url("../img/home_test.png") 80% 0 no-repeat fixed;
+    background: url("../img/home_test.jpg") 80% 0 no-repeat fixed;
     color: #fff;
     background-size: cover;
     padding-top: 370px;
@@ -208,14 +200,182 @@ li {
     font-size: 3.5em;
 }
 
+#message {
+    background: url("../img/message.png") 80% 0 no-repeat fixed;
+    color: #fff;
+    padding-left: 70px;
+    padding-top: 200px;
+    padding-bottom: 150px;
+    background-size: cover;
+
+}
+
+
+
+#message p {
+    width: 45%;
+        font-size: 1.2em;
+
+    /*line-height: 150%*/
+
+}
+
+#professional p {
+    line-height: 120%;
+}
+
+.half_right {
+    width: 43%;
+    left: 52%;
+    position: relative;
+    /*float: right;*/
+}
+
+.half_left p {
+    position: absolute;
+    margin-top: 950px;
+    width: 50%;
+}
+
+
+h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    text-align: right;
+    font-size: 20px;
+    /*float: right;*/
+    /*position: absolute;*/
+
+}
+
+#about {
+    padding-left: 70px;
+    padding-top: 60px;
+    padding-right: 150px;
+    height: 600px;
+    background-size: cover;
+}
+
+#about_text {
+    width: 70%;
+    position: absolute;
+    margin-top: 30px;
+}
+
+#about_img {
+    position: absolute;
+    /*float: right;*/
+    right: 80px;
+    margin-top: 180px;
+
+
+}
+
+#about h4 {
+/*        border: 3px solid #8AC007;
+*/        position: absolute;
+padding: 0;
+right: 0;
+margin-top: 0;
+
+}
+
+#about a {
+    color: black;
+    font-size: 1.2em;
+}
+
+
+#philanthropy {
+
+    padding-bottom: 100px;
+    background: url("../img/philanthropy.jpg") 80% 0 no-repeat fixed;
+    color: #fff;
+    padding-left: 70px;
+    padding-top: 250px;
+
+    background-size: cover;
+}
+
+#rush {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+    background: url("../img/rush_test.jpg") 80% 0 no-repeat fixed;
+    color: #fff;
+    background-size: cover;
+}
+
+#rush p, h4 {
+    opacity: .87;
+    padding-right: 550px;
+
+}
+
+#rush h4 {
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+#rush a {
+    color: white;
+}
+
+#rush h1 {
+    font-size: 55px;
+}
+
+#professional {
+/*    padding-right: 70px;
+*/    padding-bottom: 100px;
+padding-top: 100px;
+/*float: right;*/
+background: url("../img/profesh.jpg") 80% 0 no-repeat fixed;
+background-size: cover;
+/*    margin-top: 50px;*/
+}
+
+
+#professional h1 {
+    text-align: left;
+    font-size: 60px;
+    padding-right: 50px;
+}
+
+#philanthropy h1 {
+    font-size: 80px;
+    text-transform: capitalize;
+}
+
+#philanthropy p {
+    width: 70%;
+}
 
 h3 {
  font-family: "Roboto", sans-serif;
  font-weight: 300;
- font-size: 40px;
+ font-size: 20px;
  line-height: 50%;
 }
+/*
+#professional2 {
+    background: url("../img/philanthropy.jpg") 80% 0 no-repeat fixed;
+    color: #fff;
+    padding-left: 70px;
+    margin-top: 50px;
+    /*width: 100%;
+    background-size: cover;
+    }*/
 
+/*
+
+/*.philanthropy_text {
+/*    position: absolute;
+    padding-top: 170px;
+    padding-left: 50px;
+
+    }*/
 
     strong {
         font-family: "Open Sans", sans-serif;
@@ -284,7 +444,22 @@ vertical-align: center;
 
 }
 
+.social_media {
 
+  width: 20%;
+  float: right;
+
+  /*border: 3px solid #8AC007;*/
+  text-align: center;
+  display: block;
+  padding-top: 300px;
+
+}
+
+#media p {
+    font-size: 1.25em;
+    color: #000;
+}
 
 
 .center {
@@ -302,3 +477,129 @@ vertical-align: center;
 
 
 
+
+#brothers {
+    height: 600px;
+}
+
+#contact {
+    height: 600px;
+}
+
+#social {
+    padding-top: 60px;
+    height: 800px;
+    background-color: #222;
+    color: white;
+    background-size: cover;
+}
+
+#social #desc {
+    padding-right: 200px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+
+#social h1 {
+    padding-left: 50px;
+}
+
+#social .small {
+    font-size: 1.2em;
+    /*font-weight: 400;*/
+    /*visibility: hidden;*/
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#social h2 {
+    font-size: 2em;
+    text-align: center;
+    padding-top: 40%;
+}
+
+#blue_sapphire {
+    color: white;
+}
+
+#blue_sapphire p {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+#other_social p {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#yellow_rose p {
+    background-color: rgba(255, 255, 100, 0.5);
+}
+
+#yellow_rose {
+    color: black;
+}
+
+.social_square p {
+    margin-top: 0;
+    height: 85%;
+    padding-top: 15%;
+    vertical-align: middle;
+}
+
+#other_social {
+    color: white;
+}
+
+.social_square img {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+}
+
+
+
+
+.social_square .active {
+    z-index: -1;
+}
+
+.social_square .next {
+    z-index: -2;
+}
+
+
+
+#rush_page {
+ background: url("../img/rush2.jpg") 100% 0 no-repeat fixed;
+ color: black;
+ background-size: cover;
+ padding-top: 20px;
+ height: 700px;
+ padding-bottom: 100px;
+ padding-left: 50px;
+ padding-right: 50px;
+}
+
+#rush_page .content {
+    width: 50%;
+    text-align: left;
+    margin: 0;
+    left: 0px
+}
+
+#rush_page a {
+    color: white;
+}
+
+#leadership {
+    padding-bottom: 200px;
+    padding-top: 200px;
+    padding-left: 50px;
+    color: black;
+    background: url("../img/leadership.jpg") 80% 0 no-repeat fixed;
+    background-size: cover;
+}
+
+#leadership p {
+    width: 50%;
+}
