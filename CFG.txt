@@ -1,4 +1,5 @@
 CREATE DATABASE cfgTeam3;
+USE cfgTeam3;
 CREATE TABLE student
 (
 UID varchar(50) NOT NULL PRIMARY KEY, 
@@ -20,6 +21,7 @@ UID varchar(50) NOT NULL,
 course varchar(50) NOT NULL,
 assignment varchar(250),
 grade int,
+date varchar(50),
 PRIMARY KEY(uid, course)
 );
 
