@@ -33,7 +33,7 @@
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     /* Load data from file with a specific type function */
-    d3.csv("FakeData.csv", type, function(error, data) {
+    d3.csv("Courses.csv", type, function(error, data) {
 
       /**
        * Process the data. If filtering is required before binding the data to
@@ -41,13 +41,13 @@
        *
        **/
 
-      console.log(data);
+      data = data.filter(isNotCorrupt);
 
 
       if (error) throw error;
       /* Setting the domain for X and Y */
-      x.domain(data.map(function(d) { return d["Date"]; }));
-      y.domain([0, d3.max(data, function(d) { return d.Grade; })]);
+      x.domain(data.map(function(d) { return d["Department"] + d["Course Number"]; }));
+      y.domain([0, d3.max(data, function(d) { return d.GPA; })]);
       /* Drawing the X and Y axes */
       drawXAxis();
       drawYAxis();
@@ -63,16 +63,16 @@
 
        var map = d3.map();
        data.forEach(function(d){
-            if (!map.has(d.Date)){
-                map.set(d.Date, [d.Date])
+            if (!map.has(d.Department)){
+                map.set(d.Department, [d.Department])
             }
         });
 
-       var date = d3.select("body")
+       var department = d3.select("body")
           .append("select")
-          .attr("class", "date");
+          .attr("class", "department");
 
-       date
+       department
           .selectAll(".option")
           .data(map.keys())
           .enter()
@@ -88,9 +88,9 @@
       d3.select("body")
           .append("p")
           .append("input")
-          .attr("class", "Grade_input")
+          .attr("class", "gpa_input")
           .attr("type", "number")
-          .attr("placeholder", "Enter Grade");
+          .attr("placeholder", "Enter GPA");
 
       d3.select("body")
           .append("p")
@@ -103,22 +103,21 @@
     });
 
     function type(d) {
-      d.Grade = +d.Grade;
-      d.Date = +d.Date;
+      d.GPA = +d.GPA;
       return d;
     }
 
     function filterBars() {
-      var selectedIndex = d3.select(".date").property('selectedIndex');
-      var data = d3.select(".date").selectAll('option')[0][selectedIndex].__data__;
-      var Grade = d3.select(".Grade_input").property('value');
+      var selectedIndex = d3.select(".department").property('selectedIndex');
+      var data = d3.select(".department").selectAll('option')[0][selectedIndex].__data__;
+      var gpa = d3.select(".gpa_input").property('value');
       svg.selectAll(".bar")
          .transition()
          .duration( 1000 )
          .delay(function(d) { return Math.random() * 500;} )
          .style("opacity", 1);
       svg.selectAll(".bar")
-         .filter(function(d) { return d.Date != data || d.Grade < Grade; })
+         .filter(function(d) { return d.Department != data || d.GPA < gpa; })
          .transition()
          .duration( 1000 )
          .delay(function(d) { return Math.random() * 500;} )
@@ -126,7 +125,7 @@
     }
 
     function isNotCorrupt(datum) {
-      return datum.Grade > 0 && datum.Grade <= 4;
+      return datum.GPA > 0 && datum.GPA <= 4;
     }
   </script>
 </body>
