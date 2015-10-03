@@ -40,7 +40,7 @@ CREATE TABLE events
 UID varchar(50) NOT NULL,
 eventName varchar(250) NOT NULL,
 date varchar(50) NOT NULL,
-eventType(50),
+eventType varchar(50),
 hours int,
 PRIMARY KEY(UID, eventName)
 );
