@@ -33,7 +33,7 @@
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     /* Load data from file with a specific type function */
-    d3.csv("Courses.csv", type, function(error, data) {
+    d3.csv("Course.csv", type, function(error, data) {
 
       /**
        * Process the data. If filtering is required before binding the data to
@@ -41,7 +41,8 @@
        *
        **/
 
-      data = data.filter(isNotCorrupt);
+
+      console.log(data);
 
 
       if (error) throw error;
@@ -124,8 +125,6 @@
          .style("opacity", 0);
     }
 
-    function isNotCorrupt(datum) {
-      return datum.GPA > 0 && datum.GPA <= 4;
-    }
+
   </script>
 </body>
