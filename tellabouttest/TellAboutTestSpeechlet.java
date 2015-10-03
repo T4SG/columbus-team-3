@@ -44,13 +44,8 @@ public class TellAboutTestSpeechlet implements Speechlet  {
     @Override
     public SpeechletResponse onIntent(final IntentRequest request, final Session session)
             throws SpeechletException {
-        log.info("onIntent requestId={}, sessionId={}", request.getRequestId(),session.getSessionId());
-            handleTypeTestIntent(session);
-            SpeechletResponse resp = handleReturnTestIntent(session);
-
-            String speechOutput = resp.toString();
-            String repromptText = speechOutput;
-            return newAskResponse("<speak>" + speechOutput + "</speak>", "<speak>" + repromptText + "</speak>");
+        log.info("onIntent requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
+            return handleReturnTestIntent(session);
     }
 
     @Override
@@ -80,19 +75,15 @@ public class TellAboutTestSpeechlet implements Speechlet  {
     }
 
     private SpeechletResponse handleReturnTestIntent(final Session session) {
-        String speechOutput = "What was the test?";
+        String speechOutput = "What was Your grade?";
 
         // Reprompt speech will be triggered if the user doesn't respond.
         String repromptText = "I'm sorry I didn't catch that";
 
-        // Create the Simple card content.
-        SimpleCard card = new SimpleCard();
-        card.setTitle("Lebron");
-        card.setContent(speechOutput);
+        // Create the Simple card content
 
         SpeechletResponse response = newAskResponse("<speak>" + speechOutput + "</speak>",
                 "<speak>" + repromptText + "</speak>");
-        response.setCard(card);
         return response;
     }
 
