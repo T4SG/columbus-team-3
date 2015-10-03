@@ -1,26 +1,26 @@
-var margin = {top: 50, right: 50, bottom: 200, left: 50};
+var margin = {top: 100, right: 50, bottom: 200, left: 50};
 var width = 500 - margin.left - margin.right;
 var height = 700 - margin.top - margin.bottom;
 
 // pre-cursors
 var sizeForCircle = function(d) {
-  return 6 * d["Serving Size Weight"];
+  return 5;
 }
 
 // setup x
-var xValue = function(d) { return d["Sugars"];}, // data -> value
+var xValue = function(d) { return d["Date"];}, // data -> value
     xScale = d3.scale.linear().range([0, width]), // value -> display
     xMap = function(d) { return xScale(xValue(d));}, // data -> display
     xAxis = d3.svg.axis().scale(xScale).orient("bottom");
 
 // setup y
-var yValue = function(d) { return d["Calories"];}, // data -> value
+var yValue = function(d) { return d["Attendance"];}, // data -> value
     yScale = d3.scale.linear().range([height, 0]), // value -> display
     yMap = function(d) { return yScale(yValue(d));}, // data -> display
     yAxis = d3.svg.axis().scale(yScale).orient("left");
 
 // setup fill color
-var cValue = function(d) { return d.Manufacturer;},
+var cValue = function(d) { return d.School;},
     color = d3.scale.category20();
 
 
@@ -58,20 +58,21 @@ var tooltip = d3.select("body").append("div")
     .style("opacity", 0);
 
 // load data
-d3.csv("Cereal.csv", function(error, data) {
+d3.csv("StudentInfo.csv", function(error, data) {
 
   // change string (from CSV) into number format
   data.forEach(function(d) {
-    d["Sugars"] = +d["Sugars"];
-    d["Calories"] = +d["Calories"];
+    d["Date"] = +d["Date"];
+    d["Attendance"] = +d["Attendance"];
 //    console.log(d);
   });
 
-  data = data.filter(filterNegativeValues);
+
+  // console.log(data);
 
   /* Setting the domain for X and Y */
-      x.domain(data.map(function(d) { return d["Manufacturer"]; }));
-      y.domain([0, d3.max(data, function(d) { return d.Calories; })]);
+      x.domain(data.map(function(d) { return d["Grade Level"]; }));
+      y.domain([0, d3.max(data, function(d) { return d.Attendance; })]);
       /* Drawing the X and Y axes */
       drawXAxis();
       drawYAxis();
@@ -94,7 +95,7 @@ d3.csv("Cereal.csv", function(error, data) {
       .attr("y", -6)
       .attr("fill", "white")
       .style("text-anchor", "end")
-      .text("Sugars");
+      .text("Date");
 
   // y-axis
   svgScatter.append("g")
@@ -108,7 +109,7 @@ d3.csv("Cereal.csv", function(error, data) {
       .attr("dy", ".71em")
       .attr("fill", "white")
       .style("text-anchor", "end")
-      .text("Calories");
+      .text("Attendance");
 
   // draw dots
   svgScatter.selectAll(".dot")
@@ -121,7 +122,7 @@ d3.csv("Cereal.csv", function(error, data) {
       .style("fill", function(d) { return color(cValue(d));})
       .on("click", function (d) {
         // console.log(d);
-          filterBars(d.Calories);
+          filterBars(d.Attendance);
       })
       .on("mouseover", function(d) {
 
@@ -131,8 +132,8 @@ d3.csv("Cereal.csv", function(error, data) {
                .style("opacity", .75);
 
           // fill to the tool tip with the appropriate data
-          tooltip.html("<strong>" + d["Cereal Name"] + "</strong><br/>Sugars: " + xValue(d)
-          + "mg<br/>Calories: " + yValue(d) + "mg")
+          tooltip.html("<strong>" + d["UID"] + "</strong><br/>Date: " + xValue(d)
+          + "<br/>Attendance: " + yValue(d) + "")
                .style("left", (d3.event.pageX + 5) + "px")
                .style("top", (d3.event.pageY - 28) + "px");
 
@@ -171,7 +172,7 @@ d3.csv("Cereal.csv", function(error, data) {
 
 
 function filterNegativeValues(datum) {
-    return datum["Calories"] >= 0 && datum["Sugars"] >= 0;
+    return datum["Attendance"] >= 0 && datum["Date"] >= 0;
 }
 
 function drawXAxis(){
@@ -196,16 +197,18 @@ function drawYAxis() {
       .attr("x", 9)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Calories");
+      .text("Attendance");
 }
 
 function drawBars(data) {
 
+  // console.log(data);
+
   var averages = d3.nest()
-      .key(function(d) { return d.Manufacturer; })
+      .key(function(d) { return d["Grade Level"]; })
       .rollup(function(test) {
         return d3.mean(test, function(d) {
-          return d.Calories;
+          return d.Attendance;
         });
       })
       .entries(data);
@@ -242,16 +245,16 @@ function filterBars(cals) {
          .style("fill", "#FF6699");
 }
 
-function filterDots(manufacturer) {
+function filterDots(School) {
       svgScatter.selectAll(".dot")
          .transition()
          .duration( 1000 )
          .delay(function(d) { return Math.random() * 500;} )
          .style("opacity", 1);
       svgScatter.selectAll(".dot")
-         .filter(function(d) { return d.Manufacturer != manufacturer; })
+         .filter(function(d) { return d.School != School; })
          .transition()
          .duration( 1000 )
          .delay(function(d) { return Math.random() * 500;} )
-         .style("opacity", 0.25);
+         .style("opacity", 0.15);
     }
