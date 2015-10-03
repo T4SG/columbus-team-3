@@ -45,17 +45,8 @@ public class TellAboutTestSpeechlet implements Speechlet  {
     public SpeechletResponse onIntent(final IntentRequest request, final Session session)
             throws SpeechletException {
         log.info("onIntent requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
-        String speechOutput = "Thanks for submitting";
-        String repromptText = "Sorry I didn't catch that";
-        int i=0;
-        if(i == 0) {
-            i++;
-            return handleReturnTestIntent(session);
-        }else{
-            return newAskResponse("<speak>" + speechOutput + "</speak>", "<speak>" + repromptText + "</speak>");
-        }
 
-
+        return handleReturnTestIntent(session);
     }
 
     @Override
