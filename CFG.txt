@@ -20,6 +20,7 @@ uid varchar(50) NOT NULL,
 course varchar(50) NOT NULL,
 assignment varchar(250),
 grade int,
+PRIMARY KEY(uid, course)
 );
 
 CREATE TABLE attendance
@@ -28,5 +29,15 @@ uid varchar(50) NOT NULL,
 course varchar(50) NOT NULL,
 daysAttended int,
 daysAbsent int,
-streak int
+streak int,
+PRIMARY KEY(uid, course)
+);
+
+CREATE TABLE events
+(
+uid varchar(50),
+eventName varchar(250),
+date varchar(50),
+eventType(50),
+hours int
 );
