@@ -1,0 +1,32 @@
+CREATE DATABASE cfgTeam3;
+CREATE TABLE student
+(
+uid varchar(50) NOT NULL PRIMARY KEY, 
+firstName varchar(50) NOT NULL,
+lastName varchar(50) NOT NULL,
+grade int,
+school varChar(50),
+address varChar(50),
+city varchar(50),
+state varchar(50),
+zip int,
+phone varchar(50),
+email varchar(50)
+);
+
+CREATE TABLE grades
+(
+uid varchar(50) NOT NULL,
+course varchar(50) NOT NULL,
+assignment varchar(250),
+grade int,
+);
+
+CREATE TABLE attendance
+(
+uid varchar(50) NOT NULL,
+course varchar(50) NOT NULL,
+daysAttended int,
+daysAbsent int,
+streak int
+);
